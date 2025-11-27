@@ -83,6 +83,8 @@
 
         <section><?php include 'inc/slider.php' ?></section>
 
+        <!-- Story, Collection, Membership, Quote, Cocktails, RRSS, FindUs, -->
+
         <section><?php include 'inc/footer.php' ?></section>
 
     </div><!--contenedor-->
