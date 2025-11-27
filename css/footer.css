@@ -1,0 +1,143 @@
+
+/* ==============================================================================
+                      F   O   O   T   E   R
+============================================================================== */
+
+.contieneFooter{
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+  padding: 30px 0;
+  color: white;
+  background-color: #313331;
+}
+.contieneFooter #contieneZapatoFooter {
+  position: absolute;
+  top:-30%;
+  left: 5%;
+  width: 200px;
+}
+.contieneFooter #contieneZapatoFooter img {
+  width: 100%;
+}
+.contieneFooter .cajaFooter{
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+.contieneFooter .cajaFooter .cuarto{
+  width: 25%;
+  text-indent: 1em;
+  border-left: 1px solid gray;
+}
+.contieneFooter .cajaFooter .cuarto h3{
+  line-height: 1.6em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  margin-bottom: 5px;
+}
+.contieneFooter .cajaFooter .cuarto ul li a{
+  line-height: 1.6em;
+  letter-spacing: 2px;
+  font-size: 0.7em;
+  color: white;
+}
+.contieneFooter .cajaFooter .cuarto .contieneRedes{
+  width: 90%;
+  max-width: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.contieneFooter .cajaFooter .cuarto .contieneRedes a{
+  width: 40px;
+}
+.contieneFooter .cajaFooter .cuarto .contieneRedes a img{
+  width: 100%;
+}
+.creditos{
+  font-size: 0.7em;
+  padding: 25px;
+  color: white;
+  background: #212121;
+  text-align: center;
+  letter-spacing: 2px;
+  max-width: 1350px;
+  margin: auto;
+}
+
+
+/* =========================================================================================
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+========================================================================================= */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+
+/* ==============================================================================
+            F   O   O   T   E   R        M   Ó   V   I   L   E   S
+============================================================================== */
+
+.contieneFooter{
+  width: 100%;
+}
+.contieneFooter #contieneZapatoFooter {
+  position: absolute;
+  top:-10%;
+  left: 3%;
+  width: 180px;
+}
+.contieneFooter .cajaFooter{
+  display: block;
+  justify-content: center;
+}
+.contieneFooter .cajaFooter .cuarto{
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 20px;
+  text-align: center;
+  border-left: 0;
+  padding-top: 10px;
+  border-top: 1px solid white;
+}
+.contieneFooter .cajaFooter .cuarto h3{
+  line-height: 1.6em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  margin-bottom: 5px;
+}
+.contieneFooter .cajaFooter .cuarto ul li a{
+  line-height: 1.6em;
+  letter-spacing: 2px;
+  font-size: 0.7em;
+}
+.contieneFooter .cajaFooter .cuarto .contieneRedes{
+  width: 90%;
+  max-width: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.contieneFooter .cajaFooter .cuarto .contieneRedes a{
+  width: 40px;
+  color: white;
+}
+.contieneFooter .cajaFooter .cuarto .contieneRedes a img{
+  width: 100%;
+}
+  .creditos {
+  font-size: .7em;
+  line-height: 1.5em;
+}
+
+
+
+}
