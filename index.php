@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/footer.css">
 

@@ -1,0 +1,77 @@
+#contieneSlider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider {
+    width: 100%;
+}
+.slider img {
+    width: 100%;
+}
+#contieneSlider  #slider01 {
+    width: 100%;
+    z-index: 1;
+}
+
+
+#contieneSlider .diapoMovil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: 0.8s ease-in-out;
+}
+
+/* Hover diapo 01*/ 
+#slider01:hover ~ #slider02,
+#slider01:hover ~ #slider03,
+#slider01:hover ~ #slider04 {
+  transform: translateX(100%);
+}
+
+/*  Diapo 02 */ 
+#contieneSlider #slider02 {
+    transform: translateX(25%);
+    z-index: 2;
+}
+/*  Hover */ 
+#slider02:hover ~ #slider03,
+#slider02:hover ~ #slider04
+ {
+  transform: translateX(100%);
+}
+#contieneSlider #slider02:hover {
+    transform: translateX(0);
+}
+
+/*  Diapo 03 */ 
+#contieneSlider #slider03 {
+    transform: translateX(50%);
+    z-index: 3;
+}
+/*  Hover */ 
+#slider03:hover ~ #slider02,
+#slider03:hover ~ #slider04
+ {
+  transform: translateX(100%);
+}
+#contieneSlider #slider03:hover {
+    transform: translateX(0);
+}
+
+/*  Diapo 04 */ 
+#contieneSlider #slider04 {
+    transform: translateX(75%);
+    z-index: 4;
+}
+#contieneSlider #slider04:hover {
+    transform: translateX(0);
+}
+
+/* ===== SLIDER PARA MÓVIL (JS) ===== */
+@media (max-width: 768px) {
+
+
+}
