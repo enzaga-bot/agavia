@@ -13,7 +13,10 @@
     width: 100%;
     z-index: 1;
 }
-
+#contieneSlider  #slider01, #contieneSlider  #slider02, #contieneSlider  #slider03, #contieneSlider  #slider04 {
+    filter: sepia(60%);
+    transition: 1s ease-in-out;
+}
 
 #contieneSlider .diapoMovil {
     position: absolute;
@@ -24,11 +27,36 @@
     transition: 0.8s ease-in-out;
 }
 
+.contieneTexto {
+    position: absolute;
+    width: 30%;
+    top: 45%;
+    color: white;
+}
+.contieneTexto h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.contieneTexto p {
+    padding: 10px 0;
+    letter-spacing: 1px;
+    line-height: 1.3rem;
+}
+
+
+#slider01 .contieneTexto {
+    left: 12%;
+    z-index: 5;
+}
 /* Hover diapo 01*/ 
+
 #slider01:hover ~ #slider02,
 #slider01:hover ~ #slider03,
 #slider01:hover ~ #slider04 {
   transform: translateX(100%);
+}
+#contieneSlider #slider01:hover {
+    filter: sepia(0%);
 }
 
 /*  Diapo 02 */ 
@@ -36,20 +64,42 @@
     transform: translateX(25%);
     z-index: 2;
 }
+#contieneSlider #slider02 .contieneTexto {
+    right: 12%;
+    z-index: 2;
+    text-align: right;
+}
+#contieneSlider #slider02 .contieneTexto .boton {
+    display: block;
+    float: right;
+}
 /*  Hover */ 
 #slider02:hover ~ #slider03,
 #slider02:hover ~ #slider04
  {
   transform: translateX(100%);
 }
+#slider02:hover ~ #textoDiapo01 {
+    opacity: 0;
+}
 #contieneSlider #slider02:hover {
     transform: translateX(0);
+    filter: sepia(0%);
 }
 
 /*  Diapo 03 */ 
 #contieneSlider #slider03 {
     transform: translateX(50%);
     z-index: 3;
+}
+#contieneSlider #slider03 .contieneTexto {
+    right: 12%;
+    z-index: 3;
+    text-align: right;
+}
+#contieneSlider #slider03 .contieneTexto .boton {
+    display: block;
+    float: right;
 }
 /*  Hover */ 
 #slider03:hover ~ #slider02,
@@ -59,6 +109,7 @@
 }
 #contieneSlider #slider03:hover {
     transform: translateX(0);
+    filter: sepia(0%);
 }
 
 /*  Diapo 04 */ 
@@ -66,12 +117,93 @@
     transform: translateX(75%);
     z-index: 4;
 }
+#contieneSlider #slider04 .contieneTexto {
+    right: 12%;
+    z-index: 4;
+    text-align: right;
+}
+#contieneSlider #slider04 .contieneTexto .boton {
+    display: block;
+    float: right;
+}
 #contieneSlider #slider04:hover {
     transform: translateX(0);
+    filter: sepia(0%);
 }
 
-/* ===== SLIDER PARA MÓVIL (JS) ===== */
+.mueveTextoDiapo01 {
+    transform: translateX(-200%);
+    transition: 1s ease-in-out;
+}
+.regresaTextoDiapo01 {
+    transform: translateX(0%);
+    transition: 1s ease-in-out;
+}
+
+
+
+/* ========= SOLO MÓVILES ========= */
 @media (max-width: 768px) {
 
+  /* Evitar que salga menú de "guardar imagen" en iOS un poco */
+  #contieneSlider {
+    -webkit-touch-callout: none;
+  }
 
+  /* Posición base (igual que ya la tenías) */
+  #contieneSlider #slider02 {
+    transform: translateX(25%);
+  }
+
+  #contieneSlider #slider03 {
+    transform: translateX(50%);
+  }
+
+  #contieneSlider #slider04 {
+    transform: translateX(75%);
+  }
+
+  /* Quitar efecto hover en móvil (por si acaso) */
+  #slider01:hover ~ #slider02,
+  #slider01:hover ~ #slider03,
+  #slider01:hover ~ #slider04,
+  #slider02:hover ~ #slider03,
+  #slider02:hover ~ #slider04,
+  #slider03:hover ~ #slider04,
+  #slider02:hover,
+  #slider03:hover,
+  #slider04:hover {
+    transform: none;
+  }
+
+  /* --- ESTADOS POR TAP --- */
+
+  /* Tap en slider02 */
+  #contieneSlider.toque-slider02 #slider02 {
+    transform: translateX(0);
+  }
+  #contieneSlider.toque-slider02 #slider03,
+  #contieneSlider.toque-slider02 #slider04 {
+    transform: translateX(100%);
+  }
+
+  /* Tap en slider03 */
+  #contieneSlider.toque-slider03 #slider03 {
+    transform: translateX(0);
+  }
+  #contieneSlider.toque-slider03 #slider02 {
+    transform: translateX(-100%);
+  }
+  #contieneSlider.toque-slider03 #slider04 {
+    transform: translateX(100%);
+  }
+
+  /* Tap en slider04 */
+  #contieneSlider.toque-slider04 #slider04 {
+    transform: translateX(0);
+  }
+  #contieneSlider.toque-slider04 #slider02,
+  #contieneSlider.toque-slider04 #slider03 {
+    transform: translateX(-100%);
+  }
 }

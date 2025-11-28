@@ -16,24 +16,47 @@
   background-color: white;
 }
 
+.boton {
+  width: fit-content;
+  display: block;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 25px;
+  border-radius: 4px;
+  transition: 0.5s ease-out;
+}
 
 
 
 
+/* colores  */
 
-
-/* ==============================================================================
-            E   S   T   I   L   O   S       C   O   M   U   N   E   S
-============================================================================== */
-
-.contenedor {
-  position: relative;
-  width: 100%;
-  max-width: 1350px;
-  min-height: 100%;
-  margin: auto;
-  box-shadow: 0px 5px 17px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 5px 17px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 5px 17px 0px rgba(0,0,0,0.75);
-  background-color: white;
+.dorado {
+  background-color: #c5a059;
+  color: #5a4216;
+}
+.dorado:hover {
+  background-color: #a96f04;
+  color: #c5a059;
+}
+.azul {
+  background-color: #068b8d;
+  color: white;
+}
+.azul:hover {
+  background-color: #005758;
+  color: white;
+}
+.naranja {
+  background-color: #da8324;
+  color: #ffd7ad;
+}
+.naranja:hover {
+  background-color: #8b4800;
+  color: #502f0c;
+}
+.marfil {
+  background-color: #eeeeee;
+  color: rgb(65, 64, 64);
 }
