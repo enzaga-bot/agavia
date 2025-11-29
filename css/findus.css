@@ -1,0 +1,36 @@
+
+
+.contieneFindus {
+    width: 100%;
+    padding: 30px 0;
+}
+.contieneFindus .contieneMitades {
+    width: 80%;
+    margin: auto;
+}
+.contieneFindus .contieneMitades .mitad iframe {
+    border-radius: 12px;
+}
+.contieneFindus .contieneInfoFindus {
+    width: 80%;
+    margin: auto;
+    text-align: right;
+}
+.contieneFindus .contieneInfoFindus h3 {
+    font-size: 1.1rem;
+}
+.contieneFindus .contieneInfoFindus form input {
+    padding: 3px 6px;
+    margin-bottom: 9px;
+}
+.contieneFindus .contieneInfoFindus .boton {
+    float: right;
+}
+.contieneFindus .contieneInfoFindus h2 {
+    padding: 10px;
+    font-size: 1.6rem;
+}
+.contieneFindus .contieneInfoFindus p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}

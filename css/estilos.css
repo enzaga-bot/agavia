@@ -23,11 +23,48 @@
   font-size: 0.8rem;
   font-weight: 600;
   padding: 8px 25px;
+  border: 0;
   border-radius: 4px;
+  cursor: pointer;
   transition: 0.5s ease-out;
 }
 
+.contieneRemate {
+  text-align: center;
+  padding: 90px 0;
+}
+.contieneRemate img {
+  width: 50%;
+  max-width: 150px;
+  margin: auto;
+}
 
+
+/* ==============================================================================
+            S  E  C  C  I  O  N  E  S
+============================================================================== */
+
+.contieneMitades {
+  display: flex;
+  align-items: center;
+}
+.contieneMitades .mitad {
+  width: 50%;
+}
+
+.contieneCuartos {
+  display: flex;
+}
+.contieneCuartos .cuarto {
+  width: 25%;
+}
+
+.contieneTercios {
+  display: flex;
+}
+.contieneTercios .tercio {
+  width: 33.333%;
+}
 
 
 /* colores  */

@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cabecera.css">
     <link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="css/rrss.css">
+	<link rel="stylesheet" href="css/findus.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/footer.css">
 
@@ -85,6 +87,12 @@
         <section><?php include 'inc/slider.php' ?></section>
 
         <!-- Story, Collection, Membership, Quote, Cocktails, RRSS, FindUs, -->
+
+		<section><?php include 'inc/rrss.php' ?></section>
+
+		<section><?php include 'inc/findus.php' ?></section>
+
+		<section><?php include 'inc/remate.php' ?></section>
 
         <section><?php include 'inc/footer.php' ?></section>
 
