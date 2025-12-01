@@ -1,0 +1,57 @@
+/* El contenedor principal */
+.age-gate-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ya no usamos imagen de fondo aquí, lo hace el video */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    overflow: hidden; /* Asegura que el video no se salga */
+}
+
+/* ESTILOS NUEVOS PARA EL VIDEO */
+#ageVideoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra todo sin deformarse */
+    z-index: -2; /* Se va hasta atrás */
+}
+
+/* Capa oscura y borrosa sobre el video */
+.age-gate-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Un poco más oscuro para que se vea bien el video */
+    backdrop-filter: blur(8px); /* Más borroso */
+    z-index: -1; /* Delante del video, detrás del contenido */
+}
+
+/* La cajita blanca (igual que antes) */
+.age-gate-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* (El resto de estilos de logo, h2, botones sigue igual...) */
+.age-logo { max-width: 120px; margin-bottom: 20px; }
+.age-gate-content h2 { color: #333; font-size: 1.5rem; margin-bottom: 30px; font-family: Arial, sans-serif; }
+.age-buttons { display: flex; justify-content: center; gap: 20px; }
+.age-buttons button { padding: 10px 30px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; font-weight: bold; transition: transform 0.2s; }
+.age-buttons button:hover { transform: scale(1.05); }
+.boton.gris { background-color: #ccc; color: #333; }

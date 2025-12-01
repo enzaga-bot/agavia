@@ -14,12 +14,15 @@
 	<meta name="author" content="" />
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/cabecera.css">
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/history.css">
 	<link rel="stylesheet" href="css/rrss.css">
 	<link rel="stylesheet" href="css/findus.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/membership.css">
 
     <title>Agavia Premium Distillers</title>
     
@@ -79,12 +82,14 @@
 
 </head>
 <body>
-    
+	<?php include 'inc/modal-edad.php'; ?>
     <div class="contenedor">
 
         <section><?php include 'inc/cabecera.php' ?></section>
 
         <section><?php include 'inc/slider.php' ?></section>
+
+        <section><?php include 'inc/history.php' ?></section>
 
         <!-- Story, Collection, Membership, Quote, Cocktails, RRSS, FindUs, -->
 
@@ -97,6 +102,6 @@
         <section><?php include 'inc/footer.php' ?></section>
 
     </div><!--contenedor-->
-
+    <section><?php include 'inc/membership.php' ?></section>
 </body>
 </html>

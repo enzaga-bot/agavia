@@ -1,0 +1,108 @@
+/* =========================================
+   1. ESTILOS BASE (ESCRITORIO / LAPTOP)
+   Aquí definimos que se vea a mitades
+   ========================================= */
+
+.contieneHistory {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.contieneMitades {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    max-width: 1200px; /* Esto evita que se estire infinitamente en pantallas gigantes */
+    margin: 0 auto;    /* Centra el contenedor en la pantalla */
+}
+
+.mitad {
+    width: 50%; /* IMPORTANTE: En compu, cada parte ocupa solo la mitad */
+    box-sizing: border-box;
+}
+
+.imagen-full {
+    width: 100%;      /* Ocupa el 100% de su contenedor (que es el 50% de la pantalla) */
+    max-width: 600px; /* SEGURO EXTRA: Evita que la imagen crezca más de 600px en escritorio */
+    height: auto;
+    display: block;
+    object-fit: cover;
+    padding-right: 20px; /* Un pequeño espacio entre imagen y texto en escritorio */
+}
+
+.contieneInfoHistory {
+    padding: 20px 40px; /* Espacio interior normal para escritorio */
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.contieneInfoHistory h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.contieneInfoHistory p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.boton.dorado {
+    background-color: #C19A6B;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* =========================================
+   2. ESTILOS MÓVIL (SOLO CELULARES)
+   Aquí forzamos el cambio de diseño
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    
+    .contieneHistory {
+        padding: 0; /* Quitamos padding vertical extra en móvil */
+    }
+
+    .contieneMitades {
+        flex-direction: column; /* Pone uno debajo del otro */
+        width: 100%;
+    }
+
+    .mitad {
+        width: 100%; /* IMPORTANTE: En móvil ocupa todo el ancho */
+        padding: 0;
+    }
+
+    .imagen-full {
+        padding-right: 0; /* Quitamos el espacio de escritorio */
+        max-width: 100%;  /* Permitimos que use toda la pantalla del cel */
+        border-radius: 0;
+    }
+
+    .contieneInfoHistory {
+        /* Aquí aplicamos lo que pediste: */
+        /* 0 a los lados para usar todo el ancho disponible */
+        padding: 30px 0; 
+        width: 100%;
+        text-align: center; /* Centramos el texto visualmente */
+    }
+
+    .contieneInfoHistory h2 {
+        font-size: 2rem;
+        padding: 0 10px; /* Mínimo respiro para que la letra no pegue al borde del cel */
+    }
+
+    .contieneInfoHistory p {
+        padding: 0 10px; /* Mínimo respiro para el párrafo */
+        text-align: justify;
+    }
+}

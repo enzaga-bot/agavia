@@ -1,0 +1,132 @@
+/* 1. EL FONDO OSCURO DE TODA LA PANTALLA */
+.membership-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* Oscurece el resto de la web */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+/* 2. LA TARJETA GRANDE (CON LA FOTO DE FONDO) */
+.contieneMembershipModal {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    height: auto;
+    min-height: 600px; /* Altura mínima para que luzca la foto */
+    
+    /* CAMBIA ESTO POR TU RUTA DE IMAGEN */
+    background: url('../images/membership.webp') no-repeat center center;
+    background-size: cover;
+    
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    
+    /* Flexbox para centrar el vidrio dentro de la foto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para que la imagen no se salga de los bordes redondos */
+}
+
+/* 3. EL PANEL DE VIDRIO (GLASSMORPHISM REAL) */
+.glass-panel {
+    /* Fondo negro pero MUY transparente para dejar ver el blur */
+    background: rgba(0, 0, 0, 0.4); 
+    
+    /* EL EFECTO BORROSO MAGICO */
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); /* Vital para Safari/iPhone */
+    
+    /* Bordes y sombras */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    /* Tamaño y Espaciado */
+    padding: 40px;
+    width: 85%; /* Dejamos espacio a los lados para ver la foto limpia */
+    max-width: 900px;
+    text-align: center;
+}
+
+/* 4. BOTÓN DE CERRAR (X) */
+.close-membership {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: rgba(255,255,255,0.7);
+    font-size: 35px;
+    text-decoration: none;
+    line-height: 1;
+    z-index: 10;
+    transition: 0.3s;
+}
+.close-membership:hover { color: #fff; transform: scale(1.1); }
+
+/* --- ESTILOS DE TEXTO Y TARJETAS --- */
+.glass-panel h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.membership-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.mem-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 30px 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.mem-card:hover { transform: translateY(-5px); }
+
+.mem-card h3 { font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 1px; font-weight: 400; }
+.mem-card .price { font-size: 1.1rem; font-weight: bold; }
+
+/* COLORES */
+.mem-card.plata { background-color: #1A1A1A; }
+.mem-card.oro { background-color: #D4AF68; color: #000; }
+.mem-card.cristalino { background-color: #164045; }
+
+.disclaimer {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* --- RESPONSIVO --- */
+@media screen and (max-width: 768px) {
+    .contieneMembershipModal {
+        width: 100%;
+        height: 100%; /* Pantalla completa en móvil */
+        border-radius: 0;
+        align-items: flex-start; /* Subir contenido */
+        padding-top: 60px; /* Espacio para la X */
+    }
+    .glass-panel {
+        width: 90%;
+        padding: 20px;
+        backdrop-filter: blur(15px); /* Un poco menos blur en móvil para rendimiento */
+    }
+    .membership-cards { flex-direction: column; }
+    .close-membership { top: 15px; right: 20px; color: white; }
+}
