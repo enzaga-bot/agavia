@@ -19,11 +19,11 @@
 
 					<div class="menu-link">
 						<ul>
-							<li><a href="index.php#"></a>Home</li>
-							<li><a href="index.php#"></a>Story</li>
-							<li><a href="index.php#"></a>Collection</li>
-							<li><a href="index.php#"></a>Memebership</li>
-							<li><a href="index.php#"></a>Contact</li>
+							<li><a href="index.php#">Home</a></li>
+							<li><a href="index.php#">Story</a></li>
+							<li><a href="index.php#">Collection</a></li>
+							<li><a id="menuActiva" href="index.php#">Memebership</a></li>
+							<li><a href="index.php#">Contact</a></li>
 						</ul>
 					</div>
 				</nav>

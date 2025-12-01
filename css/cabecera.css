@@ -75,12 +75,23 @@ header{
   transition: 0.7s;
 }
 .menu .menu-link ul li a:hover{
-  color: #2693FF;
+  color: #a96f04;
   text-shadow: 2px 2px 2px rgba(1,0,0,0);
 }
 .imagen_escalable{
   width: 100%;
   height: auto;
+}
+
+#menuActiva {
+  padding: 4px 8px;
+  background-color: #c5a059;
+  color: white;
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
+}
+#menuActiva:hover {
+  background-color: #a96f04;
 }
 
   /* Media Queries */

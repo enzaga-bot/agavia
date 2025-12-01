@@ -1,0 +1,46 @@
+.contieneCollection {
+    width: 100%;
+}
+.contieneCollection #botellascontieneCollection {
+    padding: 40px;
+    background-color: black;
+    text-align: center;
+}
+.contieneCollection #botellascontieneCollection .botella {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.contieneCollection #botellascontieneCollection .activa {
+    width: 22%;
+    max-width: 230px;
+}
+.contieneCollection #botellascontieneCollection .inactiva {
+    width: 21%;
+    max-width: 200px;
+    filter: blur(2px);
+}
+.contieneCollection #botellascontieneCollection .inactiva:hover {
+    width: 22%;
+    max-width: 230px;
+    filter: blur(0);
+}
+.contieneCollection .contieneTextoCollection {
+    width: 21%;
+    width: 100%;
+    background-color: #eeeeee;
+}
+.contieneCollection .contieneTextoCollection .textoCollection {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 0;
+    text-align: center;
+}
+.contieneCollection .contieneTextoCollection .textoCollection h2 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+.contieneCollection .contieneTextoCollection .textoCollection p {
+    padding: 10px 0;
+    line-height: 1.4rem;
+}

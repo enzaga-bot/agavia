@@ -1,0 +1,55 @@
+
+
+.contieneCocktails .cajaCocktails .setenta {
+    position: relative;
+    overflow: hidden;
+}
+.contieneCocktails .cajaCocktails .setenta #tituloCoktail {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: white;
+}
+.contieneCocktails .cajaCocktails .setenta #nombreCoktailBg {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    font-size: 1.2rem;
+    color: white;
+    z-index: 2;
+}
+.contieneCocktails .cajaCocktails .setenta img {
+    height: 100%;
+    width: auto;
+}
+.contieneCocktails .cajaCocktails .treinta img {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding: 10px 0;
+    cursor: pointer;
+    filter: sepia(75%);
+    transition: 0.4s ease-in-out;
+}
+.contieneCocktails .cajaCocktails .treinta img:hover {
+    filter: sepia(0);
+}
+.contieneCocktails .cajaCocktails .treinta .cocktailSm {
+    position: relative;
+}
+.contieneCocktails .cajaCocktails .treinta .cocktailSm .tituloCoktailSm {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    background-color: #da8324;
+    color: white;
+}
