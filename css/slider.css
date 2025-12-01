@@ -45,8 +45,13 @@
 
 
 #slider01 .contieneTexto {
-    left: 12%;
-    z-index: 5;
+    right: 12%;
+    z-index: 2;
+    text-align: right;
+}
+#contieneSlider #slider01 .contieneTexto .boton {
+    display: block;
+    float: right;
 }
 /* Hover diapo 01*/ 
 

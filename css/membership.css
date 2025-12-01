@@ -129,4 +129,36 @@
     }
     .membership-cards { flex-direction: column; }
     .close-membership { top: 15px; right: 20px; color: white; }
+}.contieneMembership {
+    width: 100%;
+    position: relative;
+    background-color: #068b8d;
+}
+.contieneMembership #fondoMembership {
+    width: 100%;
+}
+.contieneMembership .cajaMembership {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    padding: 50px 40px;
+    color: white;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.148);
+    backdrop-filter: blur(5px);
+}
+.contieneMembership .cajaMembership h1 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    letter-spacing: 5px;
+}
+.contieneMembership .cajaMembership p {
+    width: 100%;
+    max-width: 300px;
+    line-height: 1.5rem;
+    text-align: justify;
 }

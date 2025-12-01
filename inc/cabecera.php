@@ -6,7 +6,7 @@
 					<div class="container-menu">
 						<div class="logo">
 							<div class="logo_name">
-								<a href="index.php?ver=home"><img id="logo_menu" src="img/logo.svg" alt="Logo"></a>
+								<a href="index.php?ver=home"><img id="logo_menu" src="img/logoHorizontal.webp" alt="Logo"></a>
 							</div>
 							<div class="icon-menu">
 								<a id="btn-menu" class="btn-menu">
@@ -19,13 +19,11 @@
 
 					<div class="menu-link">
 						<ul>
-							<li><a href="index.php#"></a>Home</li>
-							<li><a href="index.php#"></a>Story</li>
-							<li><a href="index.php#"></a>Collection</li>
-							<li>
-								<a href="#" onclick="openMembership(event)">Membership</a>
-							</li>							
-							<li><a href="index.php#"></a>Contact</li>
+							<li><a href="index.php#">Home</a></li>
+							<li><a href="index.php#">Story</a></li>
+							<li><a href="index.php#">Collection</a></li>
+							<li><a id="menuActiva" href="index.php#">Memebership</a></li>
+							<li><a href="index.php#">Contact</a></li>
 						</ul>
 					</div>
 				</nav>

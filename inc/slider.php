@@ -16,7 +16,7 @@
 
         <div class="slider toque-slider02 diapoMovil" id="slider02">
                <div class="contieneTexto">
-                    <h2>AGAVIA 2</h2>
+                    <h2>MEMBERSHIP</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates mollitia qui odit nemo explicabo porro officia</p>
                     <div class="boton dorado"><a href="">Read More</a></div>
                 </div><!--contieneTexto-->
@@ -30,7 +30,7 @@
 
         <div class="slider toque-slider03 diapoMovil" id="slider03">
                 <div class="contieneTexto">
-                    <h2>AGAVIA 3</h2>
+                    <h2>OUR COLLECTION</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates mollitia qui odit nemo explicabo porro officia</p>
                     <div class="boton dorado"><a href="">Read More</a></div>
                 </div><!--contieneTexto-->
@@ -44,7 +44,7 @@
         
         <div class="slider toque-slider04 diapoMovil" id="slider04">
                 <div class="contieneTexto">
-                    <h2>AGAVIA 4</h2>
+                    <h2>OUR STORY</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates mollitia qui odit nemo explicabo porro officia</p>
                     <div class="boton dorado"><a href="">Read More</a></div>
                 </div><!--contieneTexto-->

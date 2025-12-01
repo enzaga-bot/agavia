@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="css/cabecera.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/history.css">
+	<link rel="stylesheet" href="css/story.css">
+	<link rel="stylesheet" href="css/collection.css">
+	<link rel="stylesheet" href="css/membership.css">
+	<link rel="stylesheet" href="css/cocktails.css">
 	<link rel="stylesheet" href="css/rrss.css">
 	<link rel="stylesheet" href="css/findus.css">
     <link rel="stylesheet" href="css/estilos.css">
@@ -91,7 +95,15 @@
 
         <section><?php include 'inc/history.php' ?></section>
 
-        <!-- Story, Collection, Membership, Quote, Cocktails, RRSS, FindUs, -->
+        <section><?php include 'inc/history.php' ?></section>
+
+		<section><?php include 'inc/story.php' ?></section>
+
+		<section><?php include 'inc/collection.php' ?></section>
+
+        <section><?php include 'inc/membership.php' ?></section>
+
+		<section><?php include 'inc/cocktails.php' ?></section>
 
 		<section><?php include 'inc/rrss.php' ?></section>
 
