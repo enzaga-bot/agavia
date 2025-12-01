@@ -6,7 +6,7 @@
 					<div class="container-menu">
 						<div class="logo">
 							<div class="logo_name">
-								<a href="index.php?ver=home"><img id="logo_menu" src="img/logo.svg" alt="Logo"></a>
+								<a href="index.php?ver=home"><img id="logo_menu" src="img/logoHorizontal.webp" alt="Logo"></a>
 							</div>
 							<div class="icon-menu">
 								<a id="btn-menu" class="btn-menu">
