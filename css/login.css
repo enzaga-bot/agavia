@@ -1,0 +1,175 @@
+/* =========================================
+   1. NAVBAR TRANSPARENTE
+   ========================================= */
+.page-login .header-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+}
+
+.page-login header, 
+.page-login nav {
+    background-color: transparent !important; 
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.page-login nav a {
+    color: #fff !important; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* =========================================
+   2. FONDO DE PANTALLA
+   ========================================= */
+.login-full-page {
+    width: 100%;
+    min-height: 100vh;
+    
+    background: url('../images/login.webp') no-repeat center center;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   3. PANEL DE LOGIN (ESTILO GLASS BLANCO)
+   ========================================= */
+.login-glass-panel {
+    /* CAMBIO: Fondo Blanco con un poco de transparencia */
+    background-color: rgba(255, 255, 255, 0.90); 
+    
+    /* Efecto de vidrio borroso detrás */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* CAMBIO: Texto general oscuro */
+    color: #333333; 
+    
+    border-radius: 12px; 
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 400px; 
+    
+    text-align: center;
+    
+    /* Sombra suave */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    
+    /* Borde gris muy suave */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.login-glass-panel h2 {
+    /* CAMBIO: Título en el Verde de la marca para que resalte sobre blanco */
+    color: #164045; 
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* =========================================
+   4. INPUTS Y LABELS
+   ========================================= */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    /* CAMBIO: Etiqueta oscura */
+    color: #164045; 
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: bold; /* Un poco más grueso para leerse bien */
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    
+    /* CAMBIO: Borde gris claro para delimitar el input sobre fondo blanco */
+    border: 1px solid #ccc;
+    
+    /* Fondo muy clarito */
+    background-color: #f9f9f9; 
+    color: #333;
+    
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #fff;
+    /* Borde y sombra dorada al escribir */
+    border-color: #D4AF68;
+    box-shadow: 0 0 8px rgba(212, 175, 104, 0.4); 
+}
+
+/* =========================================
+   5. BOTÓN LOGIN
+   ========================================= */
+.btn-login {
+    background-color: #D4AF68; 
+    color: white; /* Texto blanco en el botón dorado se ve bien */
+    
+    border: none;
+    padding: 12px 0; 
+    width: 100%;     
+    
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 30px;
+    
+    transition: transform 0.2s, background-color 0.2s;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background-color: #c49f5f; 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.login-logo {
+    display: block;
+    width: 140px;
+    height: auto;
+    margin: 0 auto 5px auto;
+    
+    /* IMPORTANTE: Si tu logo original es BLANCO, necesitas descomentar
+       la siguiente línea para invertirlo a NEGRO y que se vea en la tarjeta blanca: */
+    
+    /* filter: invert(1); */ 
+}
+
+/* =========================================
+   6. RESPONSIVO
+   ========================================= */
+@media screen and (max-width: 480px) {
+    .login-glass-panel {
+        padding: 40px 25px;
+        /* En móvil le damos un poco más de opacidad para asegurar lectura */
+        background-color: rgba(255, 255, 255, 0.95); 
+    }
+}
