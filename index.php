@@ -111,6 +111,5 @@
         <section><?php include 'inc/footer.php' ?></section>
 
     </div><!--contenedor-->
-    <section><?php include 'inc/membershippopup.php' ?></section>
 </body>
 </html>
