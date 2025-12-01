@@ -1,0 +1,203 @@
+/* =========================================
+   1. TRUCO PARA EL NAVBAR "VIVO" Y TRANSPARENTE
+   Esto hace que el menú flote sobre la foto
+   ========================================= */
+
+/* Posicionamos el contenedor del menú sobre la foto */
+.page-membership .header-wrapper {
+    position: absolute; /* Lo saca del flujo normal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté encima de todo */
+    background: transparent;
+}
+
+/* Forzamos transparencia en la cabecera y quitamos sombras */
+.page-membership header, 
+.page-membership nav {
+    background-color: transparent !important; 
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Cambiamos el color de las letras del menú a blanco para que se lean sobre la foto oscura */
+.page-membership nav a {
+    color: #fff !important; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6); /* Sombrita para lectura */
+}
+/* Si tienes un logo en SVG o imagen que es negro, necesitarías uno blanco aquí, 
+   o usar filtro CSS: filter: brightness(0) invert(1); */
+
+
+/* =========================================
+   2. CONTENEDOR DE LA PÁGINA (Fondo)
+   ========================================= */
+
+.membership-full-page {
+    width: 100%;
+    min-height: 100vh; /* Ocupa al menos el 100% de la altura de la pantalla */
+    
+    /* TU IMAGEN DE FONDO */
+    /* Asegúrate de que esta ruta sea correcta y la imagen exista */
+    background: url('../img/fondo-fiesta.jpg') no-repeat center center;
+    background-size: cover;
+    
+    /* Flexbox para centrar el panel de vidrio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Padding extra arriba para que el cuadro no choque con el menú */
+    padding-top: 100px; 
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Capa oscura opcional sobre la foto para que resalte más el texto */
+.membership-full-page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Oscuridad leve (20%) */
+    z-index: 0;
+}
+
+
+/* =========================================
+   3. PANEL DE VIDRIO (Glassmorphism)
+   ========================================= */
+
+.glass-panel {
+    position: relative;
+    z-index: 1; /* Encima de la capa oscura */
+    
+    /* Fondo negro semitransparente */
+    background: rgba(0, 0, 0, 0.5); 
+    
+    /* El efecto borroso mágico */
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); /* Para Safari/iPhone */
+    
+    /* Bordes sutiles */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    
+    padding: 50px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    
+    /* Sombra profunda para dar efecto 3D */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.glass-panel h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300; 
+    font-family: Arial, sans-serif; /* O tu fuente principal */
+}
+
+
+/* =========================================
+   4. TARJETAS DE PRECIOS
+   ========================================= */
+
+.membership-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre tarjetas */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Permite que bajen en móvil */
+}
+
+.mem-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 40px 20px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.mem-card:hover {
+    transform: translateY(-10px); /* Flota al pasar el mouse */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.mem-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.mem-card .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* --- COLORES DE LAS TARJETAS --- */
+
+/* Plata: Gris oscuro elegante */
+.mem-card.plata { 
+    background-color: #2b2b2b; 
+    border: 1px solid #444;
+}
+
+/* Oro: Dorado (color extraído de tu referencia) */
+.mem-card.oro { 
+    background-color: #D4AF68; 
+    color: #1a1a1a; /* Texto oscuro para contraste */
+}
+
+/* Cristalino: Verde azulado oscuro / Petrol */
+.mem-card.cristalino { 
+    background-color: #164045; 
+    border: 1px solid #1f555c;
+}
+
+
+/* =========================================
+   5. TEXTO LEGAL Y RESPONSIVO
+   ========================================= */
+
+.disclaimer {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+/* Ajustes para Celulares */
+@media screen and (max-width: 768px) {
+    .membership-full-page {
+        padding-top: 80px; /* Menos espacio arriba */
+        align-items: flex-start; /* Que empiece desde arriba, no centrado vertical */
+        height: auto;
+    }
+    
+    .glass-panel {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .membership-cards {
+        flex-direction: column; /* Tarjetas una debajo de otra */
+        gap: 20px;
+    }
+    
+    .mem-card {
+        width: 100%;
+    }
+}
