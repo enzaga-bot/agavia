@@ -95,7 +95,6 @@
 
         <section><?php include 'inc/history.php' ?></section>
 
-
 		<section><?php include 'inc/collection.php' ?></section>
 
         <section><?php include 'inc/membership.php' ?></section>
@@ -111,5 +110,8 @@
         <section><?php include 'inc/footer.php' ?></section>
 
     </div><!--contenedor-->
+	    <section><?php include 'inc/membershippopup.php' ?></section>
+
+
 </body>
 </html>

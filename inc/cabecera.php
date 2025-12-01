@@ -30,6 +30,36 @@
 		</header>
 	</section>
 	<script>
+		function openMembership(e) {
+        // Evita que el enlace recargue la página o ponga el # en la URL
+        if(e) e.preventDefault(); 
+        
+        // Muestra el modal (asegúrate de que el ID coincida con tu HTML)
+        var modal = document.getElementById('modalMembership');
+        if(modal) {
+            modal.style.display = 'flex';
+            // Bloquea el scroll del fondo para que no se mueva la página de atrás
+            document.body.style.overflow = 'hidden'; 
+        }
+    }
+
+    // Función para CERRAR el modal
+    function closeMembership() {
+        var modal = document.getElementById('modalMembership');
+        if(modal) {
+            modal.style.display = 'none';
+            // Reactiva el scroll de la página principal
+            document.body.style.overflow = 'auto'; 
+        }
+    }
+
+    // Cierra el modal si el usuario hace clic fuera del contenido (en el fondo oscuro)
+    window.onclick = function(event) {
+        var modal = document.getElementById('modalMembership');
+        if (event.target == modal) {
+            closeMembership();
+        }
+    }
 		/* menuUp ============================ */
 	        $(function menuUp() {
 	            $(window).scroll(function() {   
@@ -48,3 +78,4 @@
 	        });
 	//menuUp
 	</script>
+	
