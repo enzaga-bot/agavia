@@ -40,6 +40,13 @@
   margin: auto;
 }
 
+.invisibleEscritorio {
+  display: none;
+}
+.invisibleMoviles {
+  display: block;
+}
+
 /* Secciones Comunes */
 
 .contieneRemate {
@@ -66,6 +73,13 @@
   letter-spacing: 2px;
 }
 
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
 
 /* ==============================================================================
             S  E  C  C  I  O  N  E  S
@@ -140,6 +154,13 @@
 
 
 @media (max-width: 767px) {
+
+  .invisibleEscritorio {
+    display: block;
+  }
+  .invisibleMoviles {
+    display: none;
+  }
     
     
 /* ==============================================================================

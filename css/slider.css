@@ -31,7 +31,9 @@
     position: absolute;
     width: 30%;
     top: 45%;
+    right: 12%;
     color: white;
+    text-align: right;
 }
 .contieneTexto h2 {
     font-size: 1.8rem;
@@ -42,14 +44,7 @@
     letter-spacing: 1px;
     line-height: 1.3rem;
 }
-
-
-#slider01 .contieneTexto {
-    right: 12%;
-    z-index: 2;
-    text-align: right;
-}
-#contieneSlider #slider01 .contieneTexto .boton {
+.contieneTexto .boton {
     display: block;
     float: right;
 }
@@ -70,14 +65,9 @@
     z-index: 2;
 }
 #contieneSlider #slider02 .contieneTexto {
-    right: 12%;
     z-index: 2;
-    text-align: right;
 }
-#contieneSlider #slider02 .contieneTexto .boton {
-    display: block;
-    float: right;
-}
+
 /*  Hover */ 
 #slider02:hover ~ #slider03,
 #slider02:hover ~ #slider04
@@ -98,14 +88,9 @@
     z-index: 3;
 }
 #contieneSlider #slider03 .contieneTexto {
-    right: 12%;
     z-index: 3;
-    text-align: right;
 }
-#contieneSlider #slider03 .contieneTexto .boton {
-    display: block;
-    float: right;
-}
+
 /*  Hover */ 
 #slider03:hover ~ #slider02,
 #slider03:hover ~ #slider04
@@ -123,14 +108,9 @@
     z-index: 4;
 }
 #contieneSlider #slider04 .contieneTexto {
-    right: 12%;
     z-index: 4;
-    text-align: right;
 }
-#contieneSlider #slider04 .contieneTexto .boton {
-    display: block;
-    float: right;
-}
+
 #contieneSlider #slider04:hover {
     transform: translateX(0);
     filter: sepia(0%);
@@ -150,65 +130,106 @@
 /* ========= SOLO MÓVILES ========= */
 @media (max-width: 768px) {
 
-  /* Evitar que salga menú de "guardar imagen" en iOS un poco */
-  #contieneSlider {
-    -webkit-touch-callout: none;
+  .contieneTexto {
+      display: none;
+      position: absolute;
+      width: 100%;
+      right: auto;
+      top: auto;
+      bottom: 0;
+      padding: 20px 40px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.537);
   }
-
-  /* Posición base (igual que ya la tenías) */
+  #contieneSlider  #slider01, #contieneSlider  #slider02, #contieneSlider  #slider03, #contieneSlider  #slider04 {
+    filter: sepia(0);
+}
+  #contieneSlider #slider01 .contieneTexto, #contieneSlider #slider02 .contieneTexto, #contieneSlider #slider03 .contieneTexto, #contieneSlider #slider04 .contieneTexto {
+      right: auto;
+      text-align: center;
+  }
+  .contieneTexto h2 {
+      font-size: 1.2rem;
+  }
+  .contieneTexto p {
+    font-size: 0.8rem;
+      line-height: 1rem;
+  }
+  .contieneTexto .boton {
+      float: none;
+      letter-spacing: 1px;
+      font-size: 0.6rem;
+      padding: 4px 12px!important;
+  }
+  #contieneSlider #slider01 {
+    background-color: #391c0b;
+  }
   #contieneSlider #slider02 {
-    transform: translateX(25%);
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    transform: translateX(78%);
+    background-color: #068b8d;
+    box-shadow: -3px 1px 13px -3px rgba(0,0,0,0.75);
+    transition: 0.8s ease-in-out;
   }
-
   #contieneSlider #slider03 {
-    transform: translateX(50%);
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    transform: translateX(86%);
+    background-color: #046f71;
+    -webkit-box-shadow: -3px 1px 13px -3px rgba(0,0,0,0.75);
+    transition: 0.8s ease-in-out;
   }
-
   #contieneSlider #slider04 {
-    transform: translateX(75%);
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    transform: translateX(93%);
+    background-color: #034344;
+    -moz-box-shadow: -3px 1px 13px -3px rgba(0,0,0,0.75);
+    transition: 0.8s ease-in-out;
   }
+    #imagenSliderSm02,   #imagenSliderSm03,   #imagenSliderSm04 {
+        display: none;
+    }
+    .textoSeccionMovil {
+       position: relative;
+       width: 100%;
+       min-width: 100%;
+       height: 70vh;
+       min-height: 100%;
+    }
+    .textoSeccionMovil h3 {
+        position: absolute;
+        left: 1.5rem;
+        bottom: 0;
+        color: white;
+        transform: rotate(-90deg);
+        transform-origin: left bottom;
+        font-size: 0.8rem;
+    }
 
-  /* Quitar efecto hover en móvil (por si acaso) */
-  #slider01:hover ~ #slider02,
-  #slider01:hover ~ #slider03,
-  #slider01:hover ~ #slider04,
-  #slider02:hover ~ #slider03,
-  #slider02:hover ~ #slider04,
-  #slider03:hover ~ #slider04,
-  #slider02:hover,
-  #slider03:hover,
-  #slider04:hover {
-    transform: none;
-  }
 
-  /* --- ESTADOS POR TAP --- */
 
-  /* Tap en slider02 */
-  #contieneSlider.toque-slider02 #slider02 {
+    #slider02:hover ~ #slider03,
+    #slider02:hover ~ #slider04
+    {
     transform: translateX(0);
-  }
-  #contieneSlider.toque-slider02 #slider03,
-  #contieneSlider.toque-slider02 #slider04 {
-    transform: translateX(100%);
-  }
+    }
+    #slider02:hover ~ #textoDiapo01 {
+        opacity: 0;
+    }
+    #contieneSlider #slider02:hover {
+        transform: translateX(0);
+        filter: sepia(0%);
+    }
 
-  /* Tap en slider03 */
-  #contieneSlider.toque-slider03 #slider03 {
-    transform: translateX(0);
-  }
-  #contieneSlider.toque-slider03 #slider02 {
-    transform: translateX(-100%);
-  }
-  #contieneSlider.toque-slider03 #slider04 {
-    transform: translateX(100%);
-  }
 
-  /* Tap en slider04 */
-  #contieneSlider.toque-slider04 #slider04 {
-    transform: translateX(0);
-  }
-  #contieneSlider.toque-slider04 #slider02,
-  #contieneSlider.toque-slider04 #slider03 {
-    transform: translateX(-100%);
-  }
+
+
+
+    
+
 }

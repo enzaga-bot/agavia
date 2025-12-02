@@ -112,6 +112,9 @@
     </div><!--contenedor-->
 	    <section><?php include 'inc/membershippopup.php' ?></section>
 
+		<!-- Menu -->
+		<script src="js/menu.js"></script>
+
 
 </body>
 </html>
