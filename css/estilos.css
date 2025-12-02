@@ -135,3 +135,47 @@
   color: rgb(65, 64, 64);
 }
 
+
+
+
+
+@media (max-width: 767px) {
+    
+    
+/* ==============================================================================
+            S  E  C  C  I  O  N  E  S
+============================================================================== */
+
+.contieneMitades {
+  display: block;
+}
+.contieneMitades .mitad {
+  width: 100%;
+}
+
+.contieneCuartos {
+  display: block;
+}
+.contieneCuartos .cuarto {
+  width: 100%;
+}
+
+.contieneTercios {
+  display: block;
+}
+.contieneTercios .tercio {
+  width: 100%;
+}
+
+.setentaTreinta {
+  display: block;
+}
+.setentaTreinta .setenta {
+  width: 100%;
+}
+.setentaTreinta .treinta {
+  width: 100%;
+}
+
+
+}

@@ -9,7 +9,7 @@
     background-color: #fff;
 }
 
-.contieneMitades {
+.contieneHistory .contieneMitades {
     display: flex;
     flex-wrap: wrap; 
     align-items: center;
@@ -17,12 +17,12 @@
     margin: 0 auto;    /* Centra el contenedor en la pantalla */
 }
 
-.mitad {
+.contieneHistory .mitad {
     width: 50%; /* IMPORTANTE: En compu, cada parte ocupa solo la mitad */
     box-sizing: border-box;
 }
 
-.imagen-full {
+.contieneHistory .imagen-full {
     width: 100%;      /* Ocupa el 100% de su contenedor (que es el 50% de la pantalla) */
     max-width: 600px; /* SEGURO EXTRA: Evita que la imagen crezca más de 600px en escritorio */
     height: auto;
@@ -69,22 +69,27 @@
 @media screen and (max-width: 768px) {
     
     .contieneHistory {
-        padding: 0; /* Quitamos padding vertical extra en móvil */
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding: 60px 0;
     }
 
     .contieneMitades {
-        flex-direction: column; /* Pone uno debajo del otro */
+        display: block;
         width: 100%;
     }
 
     .mitad {
+        display: block;
         width: 100%; /* IMPORTANTE: En móvil ocupa todo el ancho */
         padding: 0;
     }
 
     .imagen-full {
-        padding-right: 0; /* Quitamos el espacio de escritorio */
-        max-width: 100%;  /* Permitimos que use toda la pantalla del cel */
+        padding-right: 0!important; /* Quitamos el espacio de escritorio */
+        width: 90%;
+        max-width: 90%;  /* Permitimos que use toda la pantalla del cel */
         border-radius: 0;
     }
 

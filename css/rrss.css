@@ -41,3 +41,25 @@
     cursor: pointer;
     width: 100%;
 }
+
+
+
+
+@media (max-width: 767px) {
+
+
+    .contieneRRSS .cajaRRSS .contieneCuartos {
+    display: flex;
+    width: 80%;
+    }
+    .contieneRRSS .cajaRRSS .contieneCuartos .cuarto {
+    width: 25%;
+    }
+    .contieneRRSS .cajaRRSS .contieneTercios {
+        width: 80%;
+    }
+    .contieneRRSS .cajaRRSS .contieneTercios .tercio img {
+        margin-bottom: 30px;
+    }
+
+}

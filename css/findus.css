@@ -34,3 +34,28 @@
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
+
+
+
+
+
+@media (max-width: 767px) {
+
+    .contieneFindus .contieneInfoFindus {
+        text-align: center;
+    }
+    .contieneFindus .contieneMitades .mitad iframe {
+        margin-top: 40px;
+    }
+    .contieneFindus .contieneInfoFindus {
+        text-align: center;
+    }
+    .contieneFindus .contieneInfoFindus .boton {
+        width: fit-content;
+        float: none;
+        display: block;
+        text-align: center;
+        margin: auto;
+
+    }
+}
