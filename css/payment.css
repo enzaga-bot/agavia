@@ -1,0 +1,70 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA PAYMENT.PHP
+   ========================================= */
+
+/* Hacemos el panel un poco más ancho para que quepa bien la tarjeta */
+.payment-panel {
+    max-width: 500px; 
+}
+
+/* Imagen de la tarjeta simulada */
+.card-visual {
+    margin-bottom: 25px;
+}
+.card-visual img {
+    width: 100%;
+    max-width: 350px; /* Tamaño controlado */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Título del formulario */
+.payment-panel h2 {
+    font-size: 1.5rem; /* Un poco más pequeño que el login */
+    color: white; /* En tu captura se ve blanco */
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: none; /* Quitamos mayúsculas forzadas si quieres */
+}
+
+/* Fila para poner Fecha y CVV lado a lado */
+.row-inputs {
+    display: flex;
+    gap: 15px;
+}
+.input-group.half {
+    flex: 1; /* Ocupan 50% cada uno */
+}
+
+/* Espaciador para centrar verticalmente el mensaje de carga/éxito 
+   ya que el formulario es alto y al quitarlo queda vacío */
+.spinner-spacer {
+    height: 50px; 
+}
+
+/* Ajuste del Disclaimer */
+.payment-panel .disclaimer {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 15px;
+    line-height: 1.3;
+}
+
+/* Estilos necesarios para el Spinner y Éxito (Si no los pusiste antes) */
+.loading-spinner {
+    border: 4px solid rgba(255,255,255,0.1);
+    border-top: 4px solid #D4AF68;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px auto;
+}
+.loading-text { color: white; margin-top: 10px; font-size: 1.1rem; }
+.success-icon { font-size: 4rem; color: #D4AF68; margin-bottom: 20px; animation: popIn 0.5s ease; }
+.payment-panel h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
+.success-text { color: rgba(255,255,255,0.9); font-size: 1rem; }
+
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes popIn { 0% { transform: scale(0); } 80% { transform: scale(1.1); } 100% { transform: scale(1); } }

@@ -22,7 +22,7 @@
 							<li><a href="index.php#">Home</a></li>
 							<li><a href="index.php#">Story</a></li>
 							<li><a href="index.php#">Collection</a></li>
-							<li><a id="menuActiva" href="#" onclick="openMembership(event)">Memebership</a></li>
+							<li><a id="menuActiva" href="#" onclick="openMembership(event)">Membership</a></li>
 							<li><a href="index.php#">Contact</a></li>
 						</ul>
 					</div>

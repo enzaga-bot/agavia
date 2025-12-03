@@ -39,45 +39,122 @@
     padding: 20px;
     box-sizing: border-box;
 }
-
 /* =========================================
-   3. PANEL DE LOGIN (ESTILO GLASS BLANCO)
+   ESTILOS BASE (LOGIN - BLANCO)
+   Se aplican por defecto a .login-glass-panel
    ========================================= */
 .login-glass-panel {
-    /* CAMBIO: Fondo Blanco con un poco de transparencia */
-    background-color: rgba(255, 255, 255, 0.90); 
-    
-    /* Efecto de vidrio borroso detrás */
+    /* ESTILO BLANCO (Para el Login) */
+    background-color: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-
-    /* CAMBIO: Texto general oscuro */
-    color: #333333; 
+    color: #333333; /* Texto oscuro */
     
-    border-radius: 12px; 
-    padding: 50px 40px;
-    width: 100%;
-    max-width: 400px; 
-    
-    text-align: center;
-    
-    /* Sombra suave */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     
-    /* Borde gris muy suave */
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 400px; /* Ancho angosto para login */
+    text-align: center;
+    margin: 0 auto;
 }
 
+/* Títulos del Login (Verde oscuro) */
 .login-glass-panel h2 {
-    /* CAMBIO: Título en el Verde de la marca para que resalte sobre blanco */
-    color: #164045; 
+    color: #164045;
     font-size: 2rem;
     margin-bottom: 30px;
-    font-family: Arial, sans-serif;
-    letter-spacing: 3px;
-    text-transform: uppercase;
     font-weight: 400;
+    letter-spacing: 2px;
 }
+
+/* Inputs del Login (Estilo para fondo claro) */
+.input-group label {
+    color: #164045;
+    font-weight: bold;
+}
+.input-group input {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA PAYMENT (OSCURO Y ANCHO)
+   Sobrescribimos los estilos base solo cuando tenga la clase .payment-panel
+   ========================================= */
+
+/* 1. CAMBIAMOS EL PANEL A OSCURO Y ANCHO */
+.login-glass-panel.payment-panel {
+    /* Fondo Negro Semitransparente */
+    background-color: rgba(0, 0, 0, 0.65); 
+    
+    /* Blur más fuerte */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    
+    /* Texto Blanco */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    
+    /* MUCHO MÁS ANCHO */
+    max-width: 850px !important; 
+}
+
+/* 2. CAMBIAMOS EL COLOR DE LOS TÍTULOS EN PAYMENT */
+.payment-panel h2 {
+    color: #ffffff !important; /* Blanco forzoso */
+}
+
+/* 3. CAMBIAMOS LOS INPUTS PARA QUE SE VEAN EN FONDO OSCURO */
+.payment-panel .input-group label {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: normal;
+}
+
+.payment-panel .input-group input {
+    background-color: #f4f4f4; /* Fondo claro */
+    border: 2px solid transparent;
+    color: #333;
+    padding: 14px 15px; /* Un poco más grandes */
+}
+
+.payment-panel .input-group input:focus {
+    background-color: #fff;
+    border-color: #D4AF68;
+    box-shadow: 0 0 10px rgba(212, 175, 104, 0.4);
+}
+
+/* 4. AJUSTES DE IMAGEN Y DISCLAIMER */
+/* AJUSTE PARA HACER LA TARJETA MÁS PEQUEÑA */
+.card-visual img {
+    width: 100%;
+    
+    /* CAMBIO: Reducimos el ancho máximo (antes era 350px o 380px) */
+    max-width: 260px; 
+    
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    
+    /* CAMBIO: Aseguramos que esté centrada */
+    display: block;
+    margin: 0 auto 25px auto;
+}
+
+.payment-panel .disclaimer {
+    color: rgba(255,255,255,0.6);
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+/* Espaciadores y Layout */
+.row-inputs { display: flex; gap: 20px; }
+.input-group.half { flex: 1; }
+.spinner-spacer { height: 60px; }
 
 /* =========================================
    4. INPUTS Y LABELS
@@ -163,6 +240,37 @@
     /* filter: invert(1); */ 
 }
 
+.login-full-page.payment-bg {
+    /* Cambia 'fondo-barricas.jpg' por el nombre de tu imagen para la pantalla de pago */
+    background-image: url('../images/paymentbkg.webp');
+    
+    /* Aseguramos que se cubra bien */
+    background-position: center center;
+    background-size: cover;
+}
+
+/* --- ANIMACIÓN PARA ENCOGER EL PANEL EN LA CARGA --- */
+.login-glass-panel {
+    /* Agregamos transición suave para cuando cambie de ancho */
+    transition: max-width 0.5s ease, padding 0.5s ease, height 0.5s ease;
+}
+
+/* Cuando activamos el modo carga, forzamos que sea angosto de nuevo */
+.login-glass-panel.loading-active {
+    max-width: 450px !important; /* Vuelve al tamaño compacto */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Aseguramos que el spinner se vea bien */
+.spinner-container {
+    min-height: 80px; /* Espacio reservado para que no colapse */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /* =========================================
    6. RESPONSIVO
    ========================================= */
@@ -172,4 +280,45 @@
         /* En móvil le damos un poco más de opacidad para asegurar lectura */
         background-color: rgba(255, 255, 255, 0.95); 
     }
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px; /* Espacio entre rueda y texto */
+    min-height: 60px;    /* Asegura que tenga altura */
+}
+
+.loading-spinner {
+    /* Hacemos la rueda de 50px x 50px */
+    width: 50px;
+    height: 50px;
+    
+    /* Borde base: Blanco semitransparente (para que se vea el círculo completo) */
+    border: 4px solid rgba(255, 255, 255, 0.3); 
+    
+    /* Borde superior: DORADO BRILLANTE (la parte que gira) */
+    border-top: 4px solid #D4AF68; 
+    
+    border-radius: 50%;
+    
+    /* La animación infinita */
+    animation: spin 1s linear infinite;
+}
+
+/* Animación de rotación */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ajuste para centrar verticalmente todo el bloque de carga */
+#payment-state-loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura del panel encogido */
+    min-height: 200px;
 }
