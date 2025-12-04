@@ -1,4 +1,4 @@
-<div class="contieneCollection" role="region" aria-labelledby="tituloCollection">
+<div id="seccionCollection" class="contieneCollection" role="region" aria-labelledby="tituloCollection">
     <div id="botellascontieneCollection"
          role="group"
          aria-label="Select a tequila from the AGAVIA collection">

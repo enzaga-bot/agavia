@@ -2,7 +2,7 @@
     <div class="contieneMitades">
         
         <div class="mitad">
-            <img 
+            <img id="seccionStory" 
                 src="images/history.webp" 
                 alt="Jimador working in an agave field at sunset" 
                 class="imagen-full">

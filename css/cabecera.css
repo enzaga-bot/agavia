@@ -73,6 +73,7 @@ header{
   font-weight: 400;
   letter-spacing: 4px;
   transition: 0.7s;
+  cursor: pointer;
 }
 .menu .menu-link ul li a:hover{
   color: #a96f04;
@@ -155,6 +156,7 @@ header{
         text-align: center;
         font-weight: 400;
         margin: 0;
+        cursor: pointer;
       }
       .registro {
         padding-top: 10px;

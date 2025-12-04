@@ -1,4 +1,4 @@
-<div class="contieneFindus marfil" role="region" aria-labelledby="findus-heading">
+<div id="seccionContacto" class="contieneFindus marfil" role="region" aria-labelledby="findus-heading">
     <div class="contieneMitades">
 
         <div class="mitad">
