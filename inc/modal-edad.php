@@ -1,20 +1,33 @@
-<div id="ageGate" class="age-gate-overlay">
+<div id="ageGate" 
+     class="age-gate-overlay" 
+     role="dialog" 
+     aria-modal="true" 
+     aria-labelledby="ageGateHeading" 
+     aria-describedby="ageGateDescription">
     
-    <video autoplay muted loop playsinline id="ageVideoBackground">
+    <video autoplay muted loop playsinline id="ageVideoBackground" aria-hidden="true">
         <source src="videos/blurage.mp4" type="video/mp4">
         Tu navegador no soporta videos HTML5.
     </video>
+
     <div class="age-gate-content">
         <img src="img/logo.webp" alt="Agavia Logo" class="age-logo">
         
-        <h2>Are you of drinking age?</h2>
+        <h2 id="ageGateHeading">Are you of drinking age?</h2>
+
+        <!-- Descripción breve para tecnologías de asistencia -->
+        <p id="ageGateDescription">
+            To enter this site, you must confirm that you are of legal drinking age in your country.
+        </p>
         
         <div class="age-buttons">
-            <button id="btnYes" class="boton dorado">Yes</button>
-            <button id="btnNo" class="boton gris">No</button>
+            <button id="btnYes" class="boton dorado" aria-label="Yes, I am of legal drinking age">Yes</button>
+            <button id="btnNo" class="boton gris" aria-label="No, I am not of legal drinking age">No</button>
         </div>
         
-        <p id="mensaje-rechazo" style="display:none; color: red; margin-top: 10px; font-size: 0.9rem;">
+        <p id="mensaje-rechazo" 
+           style="display:none; color: red; margin-top: 10px; font-size: 0.9rem;"
+           aria-live="polite">
             You must be of legal drinking age to enter this site.
         </p>
     </div>

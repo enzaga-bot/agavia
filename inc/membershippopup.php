@@ -1,9 +1,25 @@
-<div id="modalMembership" class="membership-overlay" style="display:none;">
-    <div class="contieneMembershipModal">
-        <a href="javascript:void(0)" class="close-membership" onclick="closeMembership()">&times;</a>
+<div
+    id="modalMembership"
+    class="membership-overlay"
+    style="display:none;"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="membership-title"
+    aria-describedby="membership-disclaimer"
+>
+    <div class="contieneMembershipModal" tabindex="-1">
+        <a
+            href="javascript:void(0)"
+            class="close-membership"
+            onclick="closeMembership()"
+            aria-label="Close membership modal"
+        >
+            &times;
+        </a>
         
         <div class="glass-panel">
-            <h2>MEMBERSHIP</h2>
+            <h2 id="membership-title">MEMBERSHIP</h2>
+
             <div class="membership-cards">
                 
                 <div class="mem-card plata">
@@ -17,7 +33,7 @@
                     <a href="login.php" class="btn-buy dorado">Buy Membership</a>
                 </div>
 
-                 <div class="mem-card oro">
+                <div class="mem-card oro">
                     <h3>ORO</h3>
                     <ul class="benefits-list">
                         <li>Bottles sent every 2 months.</li>
@@ -28,7 +44,7 @@
                     <a href="login.php" class="btn-buy oscuro">Buy Membership</a>
                 </div>
 
-                 <div class="mem-card cristalino">
+                <div class="mem-card cristalino">
                     <h3>CRISTALINO</h3>
                     <ul class="benefits-list">
                         <li>Bottles sent every month.</li>
@@ -43,23 +59,41 @@
                 </div>
 
             </div>
-            <p class="disclaimer">The membership contract is subject to a one-year term with monthly payments.</p>
+
+            <p
+                class="disclaimer"
+                id="membership-disclaimer"
+            >
+                The membership contract is subject to a one-year term with monthly payments.
+            </p>
         </div>
     </div>
 </div>
 
 <script>
     function openMembership(e) {
-        if(e) e.preventDefault();
-        document.getElementById('modalMembership').style.display = 'flex';
-        document.body.style.overflow = 'hidden'; 
+        if (e) e.preventDefault();
+        const modal = document.getElementById('modalMembership');
+        const container = modal.querySelector('.contieneMembershipModal');
+
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+        // Enfocar el contenido del modal para lectores de pantalla/teclado
+        container.focus();
     }
+
     function closeMembership() {
-        document.getElementById('modalMembership').style.display = 'none';
-        document.body.style.overflow = 'auto'; 
+        const modal = document.getElementById('modalMembership');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
     }
+
     window.onclick = function(event) {
         var modal = document.getElementById('modalMembership');
-        if (event.target == modal) { closeMembership(); }
-    }
+        if (event.target === modal) {
+            closeMembership();
+        }
+    };
+
 </script>
