@@ -226,34 +226,7 @@
         filter: sepia(0%);
     }
 
-/* ... (tu código existente del media query) ... */
 
-   /* ... (tu código existente dentro del media query) ... */
-
-    /* CORRECCIÓN PARA EL SLIDER 02 */
-    /* Cuando tocas el 2, el 3 y el 4 deben irse a la derecha (100%), no quedarse en 0 */
-    #slider02:hover ~ #slider03,
-    #slider02:hover ~ #slider04 {
-        transform: translateX(100%);
-    }
-
-    /* --- REGLA FALTANTE: SLIDER 03 --- */
-    #contieneSlider #slider03:hover {
-        transform: translateX(0); /* Se abre ocupando todo el ancho */
-        z-index: 10; /* Se pone al frente */
-    }
-    /* Cuando tocas el 3, empuja al 4 a la derecha */
-    #slider03:hover ~ #slider04 {
-        transform: translateX(100%);
-    }
-
-    /* --- REGLA FALTANTE: SLIDER 04 --- */
-    #contieneSlider #slider04:hover {
-        transform: translateX(0); /* Se abre ocupando todo el ancho */
-        z-index: 10;
-    }
-
-    
 
 
 
